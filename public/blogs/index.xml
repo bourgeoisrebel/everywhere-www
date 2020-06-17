@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Everywhere IT Solutions Ltd</title>
+    <link>https://uat.everywhereitsolutions.com/blogs/</link>
+    <description>Recent content in Blogs on Everywhere IT Solutions Ltd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 21:39:53 +0100</lastBuildDate>
+    
+	<atom:link href="https://uat.everywhereitsolutions.com/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building the Hugo MVP on Azure Static Web Apps</title>
+      <link>https://uat.everywhereitsolutions.com/blogs/hugowhoknew/</link>
+      <pubDate>Tue, 16 Jun 2020 21:39:53 +0100</pubDate>
+      
+      <guid>https://uat.everywhereitsolutions.com/blogs/hugowhoknew/</guid>
+      <description>First steps in to the world of building a small company website the hardest part of the journey is always the first step
+Creating a website is one of those things that was on the to-do list for a long time, but never quite made it to the top. Work comes via networking, word of mouth and contacts built up over time, so while a modern company needs a public face, it has always been a job for mañana.</description>
+    </item>
+    
+  </channel>
+</rss>
