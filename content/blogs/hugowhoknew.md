@@ -1,7 +1,7 @@
 ---
 title: "Building the Hugo MVP on Azure Static Web Apps"
 date: 2020-06-16T21:39:53+01:00
-draft: true
+draft: false
 ---
 
 
