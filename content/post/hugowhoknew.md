@@ -1,5 +1,5 @@
 ---
-title: "Building the Hugo MVP on Azure Static Web Apps"
+title: "First steps in to the world of building a small company website"
 date: 2020-06-16T21:39:53+01:00
 draft: false
 toc: true
@@ -10,9 +10,10 @@ toc: true
 
 
 ___
-## First steps in to the world of building a small company website
 
-*the hardest part of the journey is always the first step*
+## Building the Hugo MVP on Azure Static Web Apps
+
+>the hardest part of the journey is always the first step
 
 Creating a website is one of those things that was on the to-do list for a long time, but never quite made it to the top. Work comes via networking, word of mouth and contacts built up over time, so while a modern company needs a public face, it has always been a job for mañana. Using something like Wix when you work in IT feels like cheating, but there is a bewildering number of options for creating and hosting websites on the market, making it hard to know where to start. However a recent client had a requirement to build a *living documentation* web site using a framework called __Hugo__, so this presented an opportunity to dive in and skill up, ___fast___, with a view to applying the approach to this company website.
 
@@ -32,6 +33,7 @@ Microsoft recently introduced __Aure Static Websites__, a free (in preview) ligh
 ## Create the basic Hugo website
 
 ### Step 1: Crete a new site
+
 Create a new site called *docs* in the current directory:
 
 ```bash
@@ -39,6 +41,7 @@ hugo new site docs
 ```
 
 ### Step 3: Add a theme
+
 See [the hugo website](https://themes.gohugo.io) to find a theme to use. Tihs website uses the Ananke theme, based on the Hugo quickstart. 
 
 Download your chosen theme from GitHub, add it to the site's `theme` directory, then add it to the site configuration file `config.toml`
@@ -52,6 +55,7 @@ echo 'theme = "ananke"' >> config.toml
 ```
 
 ### Step 4: Add a blog page
+
 Add a blogs section and a page with your first blog - the following command will create a new directory called `blogs`, with a file called `my-first-blog.md`
 
 ```bash
@@ -71,6 +75,7 @@ draft: true
 > Before publishing the site, change `draft: true` to false. Pages in draft are not published.
 
 ### Step 5: Preview locally
+
 Preview the page by running the hugo server in [draft](https://gohugo.io/getting-started/usage/#draft-future-and-expired-content) mode:
 
 ```bash
