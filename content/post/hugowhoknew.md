@@ -108,7 +108,12 @@ Press Ctrl+C to stop
 
 ## Deploy in to Azure
 
-TODO
+__TODO__
 
-
+Open in new tab:
 https://agrimprasad.com/post/hugo-goldmark-markdown/
+
+Sticky ToC
+https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
+
+Add pic to blogs
