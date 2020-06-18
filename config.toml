@@ -1,12 +1,13 @@
 baseURL = "https://www.everywhereitsolutions.com/"
 languageCode = "en-us"
 title = "Everywhere IT Solutions Ltd"
+description = "Journey to the cloud"
 theme = "ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
-Paginate = 100 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -34,3 +35,5 @@ enableRobotsTXT = true
   background_color_class = "bg-blue"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 2
+  show_reading_time = true
+  toc = true
