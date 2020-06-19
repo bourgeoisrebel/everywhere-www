@@ -4,6 +4,6 @@ html {
 div.sticky {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 120px;
+    top: 79px;
 	align-self: start;
 }
