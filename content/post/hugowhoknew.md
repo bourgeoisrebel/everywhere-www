@@ -74,7 +74,82 @@ draft: true
 
 > Before publishing the site, change `draft: true` to false. Pages in draft are not published.
 
-### Step 5: Preview locally
+### Step 5: Set links to open in a new tab
+
+Create a file at `layouts/_default/_markup/render-link.html` with the following content:
+
+```html
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}</a>
+```
+
+### Step 6: Add Table of Contents
+
+Hugo has ToC capability built in. Add `toc: true` to the __front matter__ of your page.md_
+
+```markdown
+---
+title: "First steps in to the world of building a small company website"
+date: 2020-06-16T21:39:53+01:00
+draft: false
+toc: true
+
+---
+```
+
+#### Configure smooth scrolling
+
+By default, when you click on a link in the ToC, it will jump straigh to the section. Enabling smooth scrolling makes the transition happen more smoothly:
+
+First, add a new folder under static called ___css___ and create a file called ___custom.ccs___ inside.
+
+```markdown
+.
+static
+├── css
+     └── custom.css
+```
+
+Add the following text to ___custom.css___
+
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
+
+When you click on a link in the table of contents now, it will scroll smoothly.
+
+Now add `custom_css = ["css/custom.css"]` in the _[Params]_ section of __config.toml__
+
+#### Configure sticky table of contents
+
+Configuring the table of contents to follow the user as they scroll down the page, rather than disappear to the top, significantly improves the navigation experience. Follow these steps to applly this change across all posts:
+
+- Copy the layout file that contains the ToC definition from the themes folder to the layouts/partials folder (you can customise the original file, but it is not recommended)
+
+`cp themes/ananke/layouts/partials/menu-contextual.html layouts/partials/menu-contextual.html`
+
+Look for the line:
+
+`<div class="bg-light-gray pa3 nested-copy-line-height nested-links">`
+
+Change it to:
+
+`<div class="sticky bg-light-gray pa3 nested-copy-line-height nested-links">`
+
+Adding the word 'sticky' just makes it easier to reference in the css file. Add the following section to __custom.css__:
+
+```css
+div.sticky {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+}
+```
+
+The menu should now travel with the page when you scroll (as it does on the page you're reading!)
+
+### Step 7: Preview locally
 
 Preview the page by running the hugo server in [draft](https://gohugo.io/getting-started/usage/#draft-future-and-expired-content) mode:
 
@@ -106,14 +181,102 @@ Press Ctrl+C to stop
 
 ![staic apps overview](/images/web-preview.png)
 
+### Apendix - all major file changes:
+
+custom.css:
+
+```css
+html {
+	scroll-behavior: smooth;
+}
+div.sticky {
+	position: sticky;
+    top: 140px;
+	align-self: start;
+}
+```
+
+config.toml:
+
+```toml
+baseURL = "https://www.everywhereitsolutions.com/"
+languageCode = "en-us"
+title = "Everywhere IT Solutions Ltd"
+description = "Journey to the cloud"
+theme = "ananke"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = ""
+  site_logo = ""
+  description = "Journey to the cloud"
+  facebook = ""
+  twitter = "https://twitter.com/azure"
+  instagram = ""
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-blue"
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  recent_posts_number = 2
+  show_reading_time = true
+  custom_css = ["css/custom.css"]
+  ```
+
+menu-contextual.html:
+
+```html
+{{/*
+  Use Hugo's native Table of contents feature. You must set `toc: true` in your parameters for this to show.
+  https://gohugo.io/content-management/toc/
+*/}}
+
+{{- if .Params.toc -}}
+<div class="sticky bg-light-gray pa3 nested-copy-line-height nested-links">
+  <p class="f5 b mb3">{{ i18n "whatsInThis" . }}</p>
+      {{ .TableOfContents }}
+  </div>
+{{- end -}}
+
+{{/*
+  Use Hugo's native related content feature to pull in content that may have similar parameters, like tags. etc.
+  https://gohugo.io/content-management/related/
+*/}}
+
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+
+{{ with $related }}
+  <div class="sticky bg-light-gray pa3 nested-copy-line-height nested-links">
+    <p class="f5 b mb3">{{ i18n "related" }}</p>
+    <ul class="pa0 list">
+	   {{ range . }}
+	     <li  class="mb2">
+          <a href="{{ .RelPermalink }}">
+            {{- .Title -}}
+          </a>
+        </li>
+	    {{ end }}
+    </ul>
+</div>
+{{ end }}
+```
+
 ## Deploy in to Azure
 
-__TODO__
-
-Open in new tab:
-https://agrimprasad.com/post/hugo-goldmark-markdown/
-
-Sticky ToC
-https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
-
-Add pic to blogs

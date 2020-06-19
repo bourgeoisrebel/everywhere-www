@@ -36,4 +36,5 @@ enableRobotsTXT = true
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 2
   show_reading_time = true
-  toc = true
+  custom_css = ["css/custom.css"]
+  

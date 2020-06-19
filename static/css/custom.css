@@ -1,0 +1,9 @@
+html {
+	scroll-behavior: smooth;
+}
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 120px;
+	align-self: start;
+}
