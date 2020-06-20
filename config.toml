@@ -37,4 +37,9 @@ enableRobotsTXT = true
   recent_posts_number = 2
   show_reading_time = true
   custom_css = ["css/custom.css"]
-  
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2 

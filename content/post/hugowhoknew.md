@@ -84,7 +84,7 @@ Create a file at `layouts/_default/_markup/render-link.html` with the following 
 
 ### Step 6: Add Table of Contents
 
-Hugo has ToC capability built in. Add `toc: true` to the __front matter__ of your page.md_
+Hugo has ToC capability built in. Add `toc: true` to the __front matter__ of your ___page.md___
 
 ```markdown
 ---
@@ -98,7 +98,7 @@ toc: true
 
 #### Configure smooth scrolling
 
-By default, when you click on a link in the ToC, it will jump straigh to the section. Enabling smooth scrolling makes the transition happen more smoothly:
+By default, when you click on a link in the ToC, it will jump instantly to the section. With a tweak to the CSS you can make the transition happen more smoothly:
 
 First, add a new folder under static called ___css___ and create a file called ___custom.ccs___ inside.
 
@@ -148,6 +148,18 @@ div.sticky {
 ```
 
 The menu should now travel with the page when you scroll (as it does on the page you're reading!)
+
+### Add config
+
+Add [the following](https://gohugo.io/getting-started/configuration-markup/#table-of-contents) to the `config.toml` file to determine how the ToC is structured:
+
+```toml
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+```
 
 ### Step 7: Preview locally
 
@@ -238,6 +250,12 @@ enableRobotsTXT = true
   recent_posts_number = 2
   show_reading_time = true
   custom_css = ["css/custom.css"]
+
+ [markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
   ```
 
 menu-contextual.html:
@@ -263,7 +281,7 @@ menu-contextual.html:
 {{ $related := .Site.RegularPages.Related . | first 15 }}
 
 {{ with $related }}
-  <div class="sticky bg-light-gray pa3 nested-copy-line-height nested-links">
+  <div class="bg-light-gray pa3 nested-copy-line-height nested-links">
     <p class="f5 b mb3">{{ i18n "related" }}</p>
     <ul class="pa0 list">
 	   {{ range . }}
