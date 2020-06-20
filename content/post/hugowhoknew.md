@@ -1,6 +1,9 @@
 ---
-title: "First steps in to the world of building a small company website"
+title: "First steps in to the world of building a small company website: Part1"
+summary: "This tutorial shows how to setup a basic website using Hugo static code generator, then add a few UI improvements to tidy up the user experience"
 date: 2020-06-16T21:39:53+01:00
+category: ["tutorial"]
+tags: ["hugo", "azure", "static-web-site"]
 draft: false
 toc: true
 ---
