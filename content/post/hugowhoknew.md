@@ -1,17 +1,18 @@
 ---
-title: "First steps in to the world of building a small company website: Part 1"
+title: "First steps in the world of building a small company website: Part 1"
 summary: "This tutorial shows how to setup a basic website using Hugo static code generator, then add a few UI improvements to tidy up the user experience"
 date: 2020-06-16T21:39:53+01:00
-category: ["tutorial"]
-tags: ["hugo", "azure", "static-web-site"]
+categories:
+- tutorials
+tags:
+- hugo
+- azure
+- website
+- "static web site" 
+keywords: ["hugo", "azure", "website", "static web site"]
 draft: false
 toc: true
 ---
-
-
-
-
-
 ___
 
 ## Building the Hugo MVP on Azure Static Web Apps
@@ -152,7 +153,7 @@ div.sticky {
 
 The menu should now travel with the page when you scroll (as it does on the page you're reading!)
 
-### Add config
+#### Configure ToC Structure
 
 Add [the following](https://gohugo.io/getting-started/configuration-markup/#table-of-contents) to the `config.toml` file to determine how the ToC is structured:
 
