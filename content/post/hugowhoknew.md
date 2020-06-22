@@ -8,8 +8,9 @@ tags:
 - hugo
 - azure
 - website
-- "static web site" 
-keywords: ["hugo", "azure", "website", "static web site"]
+- "static website" 
+- "azure static web app"
+keywords: ["hugo", "azure", "website", "static website", "azure static web app"]
 draft: false
 toc: true
 ---
