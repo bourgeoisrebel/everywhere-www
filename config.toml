@@ -2,7 +2,7 @@ baseURL = "https://www.everywhereitsolutions.com/"
 languageCode = "en-us"
 title = "Everywhere IT Solutions Ltd"
 description = "Journey to the cloud"
-# theme = "gohugo-theme-ananke"
+theme = "gohugo-theme-ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
