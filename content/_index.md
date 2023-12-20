@@ -1,6 +1,6 @@
 ---
 title: "YOUR IT, EVERYWHERE"
-description: "Democratising the Cloud"
+description: "Cloud Intelligence"
 featured_image: '/images/gohugo-default-sample-hero-image.jpg'
 # toc: true
 # description: "to the cloud"
