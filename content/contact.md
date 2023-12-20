@@ -11,4 +11,4 @@ menu: main
 
 If you would like to speak to someone about your business goals and strategic objectives, and to see how **Everyhwere IT Solutions** can help you acheive them, please complete the form below:
 
-{{< form-contact action="https://www.everywhereitsolutions.com"  >}}
+info@everywhereitsolutions.com
