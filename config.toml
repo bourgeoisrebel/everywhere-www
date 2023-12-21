@@ -17,7 +17,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  favicon = ""
+  favicon = "/images/favicon.ico"
   site_logo = "/images/FullLogo_Transparent_NoBuffer (2).png"
   description = "Journey to the cloud"
   facebook = ""
