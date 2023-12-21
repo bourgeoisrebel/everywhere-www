@@ -7,3 +7,11 @@ div.sticky {
     top: 79px;
 	align-self: start;
 }
+
+.measure-wide {
+    max-width:fit-content
+}
+
+.tc-l {
+    text-align:center
+}

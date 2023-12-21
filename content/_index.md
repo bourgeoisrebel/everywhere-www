@@ -1,8 +1,9 @@
 ---
-title: "YOUR IT, EVERYWHERE"
+title: "About Us"
 description: "Cloud Intelligence"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-# toc: true
+featured_image: "/images/cloudcomputing.jpg"
+toc: true
+menu: main
 # description: "to the cloud"
 ---
 **Overview**
@@ -17,11 +18,15 @@ We have a track record in helping organisations, large and small, private and pu
 ---
 All designs will be founded in the five pillars of Microsoft's Well Architected Framework:
 
-1)	*Reliability*: Ensuring applications are designed to meet business requirements, resilient to technical failures, and services are recoverable
-2)	*Security*: Ensure all platforms, systems, data, transactions, and operational interactions are secure, auditable, and retain their integrity
-3)	*Cost Optimisation*: Ensure systems are designed to meet business requirements while meeting initial, and ongoing, cost efficiency
-4)	*Operational Excellence*: Standards, policies, monitoring, and safe deployment practices
-5)	*Performance Efficiency*: Scaling, monitoring, and regular testing
+**Reliability**: Ensuring applications are designed to meet business requirements, resilient to technical failures, and services are recoverable
+
+**Security**: Ensure all platforms, systems, data, transactions, and operational interactions are secure, auditable, and retain their integrity
+
+**Cost Optimisation**: Ensure systems are designed to meet business requirements while meeting initial, and ongoing, cost efficiency
+
+**Operational Excellence**: Standards, policies, monitoring, and safe deployment practices
+
+**Performance Efficiency**: Scaling, monitoring, and regular testing
 
 **Specialisation**
 ---
