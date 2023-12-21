@@ -1,5 +1,5 @@
 ---
-title: "About Us"
+# title: "About Us"
 description: "Cloud Intelligence"
 featured_image: "/images/cloudcomputing.jpg"
 toc: true
